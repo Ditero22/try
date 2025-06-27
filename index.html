@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Just One More Question 💌</title>
+  <style>
+    :root {
+      --main-color: #ff80ab;
+      --accent-color: #ffc1e3;
+      --text-dark: #3d3d3d;
+      --text-light: #ffffff;
+      --bg-gradient: linear-gradient(135deg, #ffe4ec, #fceefc);
+      --input-bg: #fffafd;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-gradient);
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    form {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 700px;
+      overflow-y: auto;
+      max-height: 95vh;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--main-color);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      margin: 0 auto 20px;
+      display: block;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--main-color);
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center;
+      color: #666;
+      margin-bottom: 25px;
+      font-style: italic;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-top: 18px;
+      margin-bottom: 6px;
+      color: var(--text-dark);
+      font-size: 0.95rem;
+      text-align: left;
+    }
+
+    textarea, input[type="text"], select {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      margin-top: 4px;
+      font-size: 1rem;
+      background: var(--input-bg);
+      box-shadow: inset 2px 2px 6px #e6e6e6;
+      transition: box-shadow 0.3s ease;
+    }
+
+    textarea:focus, input[type="text"]:focus, select:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(255, 128, 171, 0.3);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto 0;
+      padding: 12px 30px;
+      background: var(--main-color);
+      border: none;
+      color: var(--text-light);
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(255, 128, 171, 0.3);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background: #ff5c9d;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      form {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <form id="confess-form">
+    <img class="profile-pic" src="https://scontent.fmnl8-1.fna.fbcdn.net/v/t39.30808-6/476456507_1354202052699177_9034751540684709600_n.jpg?_nc_cat=106&amp;ccb=1-7&amp;_nc_sid=a5f93a&amp;_nc_eui2=AeGbhk3Y8HEVVWahODre8IbiYIpecthSc4Zgil5y2FJzhkkvPUBSCrbW8Ikx-8aVpvCLWJA86_xgvZpoCME4DSsG&amp;_nc_ohc=1MXjZok316YQ7kNvwGeX-AI&amp;_nc_oc=AdkiGjmkOFaRM6Aad1TjVk3oYpm-MvqP2c7NdyBCL0bsf9pvyTjxnO6TyLNTE0qkMeg&amp;_nc_zt=23&amp;_nc_ht=scontent.fmnl8-1.fna&amp;_nc_gid=xTjH0YxEqjErrjPutoaa1w&amp;oh=00_AfOSG3sC2ZzlMzeK-3UK_6w1NvAoKtFNHpNLB0ytW6dxgw&amp;oe=68643F63" alt="Crush Picture">
+    <h1>Just One More Question 💌</h1>
+    <p>A few honest answers can say a lot... 💖</p>
+
+    <label>Your Name:</label>
+    <input type="text" name="name" required>
+
+    <label>1. How do you feel when we're together?</label>
+    <select name="togetherFeel">
+      <option value="">-- choose --</option>
+      <option>Comfortable and chill</option>
+      <option>A little butterflies 🥹</option>
+      <option>Depends on the mood</option>
+    </select>
+
+    <label>2. What’s something you actually like about me? 😳</label>
+    <input type="text" name="likedThing">
+
+    <label>3. If I surprised you with something, what would make you smile?</label>
+    <textarea name="surpriseGift"></textarea>
+
+    <label>4. If we hung out just the two of us, what would you want to do?</label>
+    <textarea name="hangoutIdea"></textarea>
+
+    <label>5. Do you think we vibe in a special way?</label>
+    <select name="vibeCheck">
+      <option value="">-- pick one --</option>
+      <option>Yeah, it's kinda obvious 😅</option>
+      <option>Maybe... I think about it sometimes</option>
+      <option>You're sweet, but I'm not sure yet</option>
+    </select>
+
+    <label>6. How do you honestly feel about me?</label>
+    <textarea name="feelAboutMe"></textarea>
+
+    <label>7. Would you be open to something more someday?</label>
+    <select name="future">
+      <option value="">-- choose --</option>
+      <option>Maybe, if things feel right</option>
+      <option>Honestly? Yeah 😳</option>
+      <option>Better as friends</option>
+    </select>
+
+    <label>8. If I sent you a good morning message every day, how would you feel?</label>
+    <select name="gmFeel">
+      <option>I’d lowkey love it</option>
+      <option>That's too clingy</option>
+      <option>Depends on the message</option>
+    </select>
+
+    <label>9. What's your ideal kind of person?</label>
+    <textarea name="idealType"></textarea>
+
+    <label>10. Have you ever thought I could be that person?</label>
+    <select name="thoughtOfMe">
+      <option>Yes... but I kept it to myself</option>
+      <option>Maybe once or twice</option>
+      <option>Not really, but you're amazing</option>
+    </select>
+
+    <label>11. What’s one moment with me you remember clearly?</label>
+    <textarea name="momentMemory"></textarea>
+
+    <label>12. Would you ever go on a date with someone who really respects and listens to you?</label>
+    <select name="dateRespect">
+      <option>Of course</option>
+      <option>Maybe, depends on who</option>
+      <option>I’m not ready for that yet</option>
+    </select>
+
+    <label>13. What’s something you wish people noticed about you more?</label>
+    <textarea name="noticed"></textarea>
+
+    <label>14. How do you act when you like someone?</label>
+    <textarea name="howYouAct"></textarea>
+
+    <label>15. Have you ever dropped hints to someone you liked?</label>
+    <select name="droppedHints">
+      <option>Yes... and they didn’t get it</option>
+      <option>I’m subtle, but I try</option>
+      <option>I keep it to myself</option>
+    </select>
+
+    <label>16. Would you be cool with late night talks or random long convos?</label>
+    <select name="deepTalks">
+      <option>Yes, I love that stuff</option>
+      <option>Only if I trust the person</option>
+      <option>Not really my thing</option>
+    </select>
+
+    <label>17. What would a perfect day with someone you like look like?</label>
+    <textarea name="perfectDay"></textarea>
+
+    <label>18. If someone liked you, how would you want them to show it?</label>
+    <textarea name="howToShowLove"></textarea>
+
+    <label>19. Do you believe in timing or effort more?</label>
+    <select name="timingOrEffort">
+      <option>Timing</option>
+      <option>Effort</option>
+      <option>A bit of both</option>
+    </select>
+
+    <label>20. Final one: What would you say if I told you you're one of the most special people I’ve met?</label>
+    <textarea name="lastOne"></textarea>
+
+    <button type="submit">Send 💌</button>
+
+  </form>
+
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbzFgleu_PQlogSDNRgzdIsK-yv_HJNgszcs3iS95JB5rJzfpsB-iZbivnUN7BIhh64U/exec";
+    const form = document.getElementById("confess-form");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        .then(() => {
+          alert("Thank you for being so honest 🥺 You're amazing.");
+          form.reset();
+        })
+        .catch(error => alert("Something went wrong. Please try again."));
+    });
+  </script>
+
+</body>
+</html>
